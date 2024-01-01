@@ -1,0 +1,121 @@
+:root {
+    --main_image_size:7em;
+    --shadow: 0px 10px 13px -7px #00000091, 5px 5px 15px 5px #00000021;
+    --border-radius: 0.4em;
+    --button_background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(243,253,255,1) 100%);
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: min-content auto min-content;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+
+    background: linear-gradient(-45deg, #ee765273, #e73c7e8c, #23a5d571, #23d5ab57);
+    background-color: #000;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 4vw;
+    text-align: center;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+header {
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+    padding-top: 2em;
+}
+  
+footer {
+    grid-area: footer;
+    font-size: 0.8em;
+    padding-bottom: 1em;
+}
+
+header,main,footer
+{
+    display: flex;
+    flex-flow: column wrap;
+    align-content: center;
+}
+
+h1,h2,h3
+{
+    margin-top: 0px;
+    margin-bottom: 1px;
+}
+
+#main_image
+{
+    width: var(--main_image_size);
+    height: var(--main_image_size);
+    display: block;
+    margin: 2em auto 2em auto;
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+}
+
+ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+a {
+    color: #fff;
+}
+
+li > a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    background: var(--button_background);
+    border-radius: var(--border-radius);
+    width: 65vw;
+    height: 3.1em;
+    margin-bottom: 1.5em;
+    line-height: 3em;
+    box-shadow: var(--shadow);
+}
+
+.back_a
+{   
+    font-size: 1.5em;
+    margin: 1em auto;
+    padding: 0.4em;
+    text-decoration: none;
+    background: var(--button_background);
+    color: #000;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+} 
+
+.text_content
+{
+    text-align: left;
+    width: 90vw;
+    font-size: 0.4em;
+}
