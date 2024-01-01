@@ -1,21 +1,28 @@
 # What is it?
-
 Laravel and ReactJS based self-hosted link collection for your social media, with GDPR-friendly basic analytics.
 
-# Prerequisites
+# Work in progress, contributions are welcome!
+This is not a deployment ready project. I do use it as my landing page, and for that matter it works, but it is still not user-friendly, for example all link administration is done through SQL.
 
+## TODO
+- [x] Write an informative dashboard 
+- [ ] Write an actual link administration panel
+- [ ] Write a log parser
+- [ ] Write a nice version of this README
+- [ ] Find a catchy name
+
+# Prerequisites
 PHP, PostgreSQL, webserver.
 
 # Installation
-
-Get necessary packets:
+After you installed PostgreSQL, and your favourite webserver with PHP, get necessary packets:
 ~~~
 apt install composer npm php-xml php-curl php-pgsql git
 ~~~
 
 Clone this repository and get the vendor files with composer and npm:
 ~~~
-git clone https://github.com/FaultierSP/NAME
+git clone https://github.com/FaultierSP/self-hosted-links
 composer update
 php artisan key:generate
 npm install
@@ -31,7 +38,6 @@ npm run build
 Serve the `public` directory with your favourite server.
 
 # Maintainance
-
 To update all packets, in your project directory:
 
 ~~~
