@@ -28,8 +28,7 @@ php artisan key:generate
 npm install
 ~~~
 
-Change the `.env.example` file name to `.env`, make necessary changes (SQL credentials, App-Name) and build the app:
-
+Change the `.env.example` file name to `.env`, make necessary changes (SQL credentials, App-Name, domain names in `SESSION_DOMAIN` and `SANCTUM_STATEFUL_DOMAINS` and your texts) and build the app:
 ~~~
 php artisan migrate
 npm run build
@@ -37,9 +36,15 @@ npm run build
 
 Serve the `public` directory with your favourite server.
 
+Create a new user with:
+~~~
+php artisan user:create -u UserName -e your@mail.com
+~~~
+
+Go to `yourdomainname.com/login`, login with your created credentials, you will be redirected to your new dashboard.
+
 # Maintainance
 To update all packets, in your project directory:
-
 ~~~
 composer update
 npm update
